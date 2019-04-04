@@ -1,8 +1,31 @@
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
+
 body {
   /* Full page gradeint */
   height: 100vh;
-  background: rgb(186, 186, 186);
-  background: linear-gradient(142deg, rgba(186, 186, 186, 1) 1%, rgba(142, 136, 215, 1) 30%, rgba(58, 139, 193, 1) 60%, rgba(255, 139, 139, 1) 100%);
+  font-family: "Pacifico", sans-serif;
+  /* Used CSS gradient */
+  background: rgb(56, 255, 168);
+  background: linear-gradient(145deg, rgba(56, 255, 168, 1) 10%, rgba(66, 222, 177, 1) 20%, rgba(71, 226, 221, 1) 30%, rgba(48, 143, 190, 1) 40%, rgba(27, 133, 212, 1) 50%, rgba(62, 167, 242, 1) 60%, rgba(130, 196, 244, 1) 70%, rgba(189, 189, 189, 1) 80%, rgba(115, 115, 115, 1) 90%, rgba(89, 89, 89, 1) 100%);
+}
+
+.circle {
+  /* CSS tricks (the shapes of css) */
+  width: 20px;
+  height: 20px;
+  background-color: #76ECAC;
+  border-radius: 50%;
+  /* Treats the circle as a text element or margin: 0 auto;   both do the same thing */
+  display: inline-block;
+}
+
+h1 {
+  font-size: 24px;
+  margin: 10px 0;
+}
+
+h2 {
+  font-size: 9vmin;
 }
 
 section {
@@ -11,11 +34,27 @@ section {
   left: 50%;
   transform: translate(-50%, -50%);
   /* This bit of code will get everything to applied to the middle */
+  text-align: center;
+  width: 60%;
+}
+
+.button {
+  /* Our icons from fontawesome are actually fonts & so to change the styles we need to use font-size, color ect */
+  font-size: 25px;
+  cursor: pointer;
+  margin: 0 20px;
+  margin-bottom: 10px;
 }
 
 footer {
   position: absolute;
-  bottom: 0%;
+  bottom: 0;
   left: 50%;
-  transition: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+@media screen and (max-width: 650px) {
+  .button {
+    font-size: 28px;
+  }
 }
